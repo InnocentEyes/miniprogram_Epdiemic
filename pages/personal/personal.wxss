@@ -1,0 +1,177 @@
+/* pages/personal/personal.wxss */
+/* 个人页面头部 */
+.header{
+  position: relative;
+  height: 520rpx;
+}
+.header .bg{
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.header .title{
+  position: relative;
+  height: 80rpx;
+}
+.header .title .tixing{
+  position: absolute;
+  bottom: 0;
+  right: 30rpx;
+  font-size: 50rpx;
+}
+.header .title .tixing_count{
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 10;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #e11a47;
+  font-size: 20rpx;
+  display: block;
+}
+.header .user-info{
+  display: flex;
+  position: relative;
+  left: 50rpx;
+  top: 60rpx;
+}
+
+.header .user-info .userImg{
+  width: 130rpx;
+  height: 130rpx;
+  border:5rpx solid #fff;
+  border-radius: 50%;
+}
+
+.header .user-info .userName{
+  max-width: 400rpx;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 130rpx;
+  line-height: 130rpx;
+  font-size: 40rpx;
+  margin-left: 40rpx;
+  font-weight: bold;
+}
+
+.header .message{
+  position: relative;
+  top: 80rpx;
+  height: 220rpx;
+  width: 90%;
+  background: rgba(0, 0, 0, .7);
+  margin: 0 auto;
+  padding: 20rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  color: #fff;
+}
+.header .message .message_header text:last-child{
+  font-size: 25rpx;
+  margin-left: 10rpx;
+}
+
+.header .message .detail{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 个人页面主体部分 */
+.cover-tainer{
+  position: relative;
+  margin-top: -120rpx;
+  padding: 0 30rpx;
+  background: #f5f5f5;
+  padding-bottom: 20rpx;
+}
+.cover-tainer .arc{
+  position:absolute;
+  left: 0;
+  top: -36rpx;
+  width: 100%;
+  height: 36rpx;
+}
+.cover-tainer .nav-section{
+  display: flex;
+  padding: 20rpx 0;
+  background: #fff;
+  border-radius: 15rpx;
+}
+.cover-tainer .nav-section .nav-item{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.nav-section .nav-item .iconfont{
+  font-size: 50rpx;
+  color: #846bff;
+  line-height: 70rpx;
+}
+.nav-section .nav-item text:last-child{
+  font-size: 25rpx;
+}
+/* 主体列表 */
+.cover-tainer .personalContent .recentComment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rpx 0rpx 40rpx 0rpx;
+}
+.cover-tainer .personalContent .recentComment .title{
+  font-weight: bold;
+  font-size: 28rpx;
+  padding: 20rpx;
+}
+.cover-tainer .personalContent .recentComment .banner{
+  position: relative;
+  width: 100%;
+  height: 250rpx;
+}
+.cover-tainer .personalContent .recentComment .banner image{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+}
+.cover-tainer .personalContent .recentComment .banner text{
+  font-size: 28rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  display: block;
+}
+.cover-tainer .personalContent .cardList .cardItem{
+  border-top: 1rpx solid #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 10rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+.cover-tainer .personalContent .cardList .cardItem .iconfont{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  color: #846bff;
+}
+.cover-tainer .personalContent .cardList .cardItem .more {
+  float: right;
+}

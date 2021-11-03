@@ -1,0 +1,177 @@
+<!--pages/comment/comment.wxml-->
+<view class="commentContainer">
+  <!-- 头部:搜索框 -->
+  <view class="header">
+    <text class="title">发现</text>
+    <view class="search">
+      <input type="text" placeholder="最新出行防疫政策" placeholder-class="placeholder" bindtap="toSearch"/>
+      <text class="iconfont icon-chazhao searchIcon"></text>
+    </view>
+  </view>
+  <view class="comment">
+    <view class="introduce">
+      <text class="title">板块介绍</text>
+      <view class="introduceImg">
+        <image src="/static/image/comment/comment.png"></image>
+        <text class="question">请问管理员我可以在这个版块做什么?</text>
+        <text class="reply">你可以点赞，文明评论他人的发言!</text>
+      </view>
+    </view>
+    <view class="commentList">
+      <scroll-view 
+      enable-flex="true" 
+      class="navScroll" 
+      scroll-x="true"
+      scroll-into-view="{{'scroll'+navId}}"
+      scroll-with-animation="true">
+        <view 
+        class="navItem" 
+        wx:for="{{commentList}}" 
+        wx:key="id"
+        id="{{ 'scroll'+item.id }}">
+          <view id="{{item.id}}" class="navContent {{ (navId == item.id) ? 'active' : '' }}" bindtap="changeNav">
+            {{item.title}}
+          </view>
+        </view>
+      </scroll-view>
+      <!-- 评论列表区域 -->
+      <scroll-view 
+      class="commentScroll"
+      scroll-y="true"
+      >
+        <view class="commentItem">
+          <view class="commentHeader">
+            <image class="userImg" src="/static/image/comment/love.png"></image>
+            <text class="userName">qzlzzz</text>
+          </view>
+          <view class="commentContent">
+            <view class="Content">
+              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
+            </view>
+            <view class="commentFoot">
+              <view class="item">
+                <text class="iconfont icon-dianzan"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-xiaoxi"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-fenxiang"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="commentItem">
+          <view class="commentHeader" style="background-color: #feb447;">
+            <image class="userImg" src="/static/image/comment/love.png"></image>
+            <text class="userName">qzlzzz</text>
+          </view>
+          <view class="commentContent">
+            <view class="Content">
+              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
+            </view>
+            <view class="commentFoot">
+              <view class="item">
+                <text class="iconfont icon-dianzan"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-xiaoxi"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-fenxiang"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="commentItem">
+          <view class="commentHeader" style="background-color: #447dc5;">
+            <image class="userImg" src="/static/image/comment/love.png"></image>
+            <text class="userName">qzlzzz</text>
+          </view>
+          <view class="commentContent">
+            <view class="Content">
+              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
+            </view>
+            <view class="commentFoot">
+              <view class="item">
+                <text class="iconfont icon-dianzan"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-xiaoxi"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-fenxiang"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="commentItem" >
+          <view class="commentHeader" style="background-color: #846bff;">
+            <image class="userImg" src="/static/image/comment/love.png"></image>
+            <text class="userName">qzlzzz</text>
+          </view>
+          <view class="commentContent">
+            <view class="Content">
+              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
+            </view>
+            <view class="commentFoot">
+              <view class="item">
+                <text class="iconfont icon-dianzan"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-xiaoxi"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-fenxiang"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="commentItem">
+          <view class="commentHeader" style="background-color:#feb447 ;">
+            <image class="userImg" src="/static/image/comment/love.png"></image>
+            <text class="userName">qzlzzz</text>
+          </view>
+          <view class="commentContent">
+            <view class="Content">
+              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
+            </view>
+            <view class="commentFoot">
+              <view class="item">
+                <text class="iconfont icon-dianzan"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-xiaoxi"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-fenxiang"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="commentItem">
+          <view class="commentHeader" style="background-color: #447dc5;">
+            <image class="userImg" src="/static/image/comment/love.png"></image>
+            <text class="userName">qzlzzz</text>
+          </view>
+          <view class="commentContent">
+            <view class="Content">
+              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
+            </view>
+            <view class="commentFoot">
+              <view class="item">
+                <text class="iconfont icon-dianzan"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-xiaoxi"></text>
+              </view>
+              <view class="item">
+                <text class="iconfont icon-fenxiang"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

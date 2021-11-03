@@ -1,0 +1,161 @@
+/* pages/comment/comment.wxss */
+.commentContainer{
+  padding: 0 30rpx;
+}
+.commentContainer .header{
+  display: flex;
+  margin-top: 58rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.commentContainer .header .title{
+  font-size: 38rpx;
+  color: #1a1a1a;
+}
+.commentContainer .search{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  border-radius: 30rpx;
+  margin-top: 58rpx;
+  border: 4rpx solid #d9d9d9 ;
+}
+.search input{
+  margin-left: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.search .placeholder{
+  font-size: 36rpx;
+  color: #1a1a1a;
+  margin-left: 20rpx;
+}
+.search .searchIcon{
+  position: absolute;
+  left: 18rpx;
+  top: 28rpx;
+  font-size: 48rpx;
+  text-align: center;
+  color: #846bff;
+}
+
+/* 评论列表 */
+.commentContainer .comment{
+  margin-top: 58rpx;
+}
+.comment .introduce{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300rpx;
+}
+.comment .introduce .title{
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.comment .introduceImg{
+  position: relative;
+  width: 100%;
+  height: 90%;
+  border-radius: 30rpx;
+}
+.comment .introduceImg image{
+  position: absolute;
+  z-index: -1;
+  border-radius: 30rpx;
+  width: 100%;
+  height: 100%;
+}
+/* 板块介绍提问回复 */
+.question{
+  position: absolute;
+  font-size: 19rpx;
+  right: 140rpx;
+  top: 80rpx;
+}
+.reply{
+  position: absolute;
+  right: 115rpx;
+  bottom: 65rpx;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+/* 评论板块 */
+.comment .commentList{
+  position: relative;
+  margin-top: -40rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+.comment .commentList .navScroll{
+  height: 80rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.navScroll .navItem{
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.navScroll .navItem .active{
+  border-bottom: 4rpx solid #846bff;
+}
+.commentList .commentScroll{
+  height: calc(100vh - 595.6rpx);
+}
+.commentScroll .commentItem{
+  border-radius: 50rpx;
+  height: 360rpx;
+  margin-top: 50rpx;
+  background-color:#fff;
+}
+.commentItem .commentHeader{
+  padding: 0 30rpx;
+  display: flex;
+  height: 90rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  background-color: #846bff;
+}
+.commentItem .commentHeader .userImg{
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto;
+  border-radius: 50%;
+}
+.commentItem .commentHeader .userName{
+  flex: 1;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 28rpx;
+  font-size: 38rpx;
+}
+.commentItem .commentContent{
+  height: 270rpx;
+  width: 100%;
+  border-bottom-left-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  border-bottom: 2rpx solid #dfdfdf;
+}
+.commentItem .commentContent .Content{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;/* 评论只允许3行 */
+  height: 150rpx;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #dfdfdf;
+}
+.commentItem .commentContent .commentFoot{
+  display: flex;
+  height: 60rpx;
+}
+.commentItem .commentContent .commentFoot .item{
+  width: 33.3333%;
+  text-align: center;
+  line-height: 60rpx;
+}
+.commentItem .commentContent .commentFoot .item text{
+  font-size: 38rpx;
+}

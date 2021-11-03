@@ -1,0 +1,88 @@
+<!--pages/personal/personal.wxml-->
+<view class="personalContainer">
+  <!-- 个人页面头部 -->
+  <view class="header">
+    <image class="bg" src="/static/image/personal/background.jpg"></image>
+    <view class="title">
+      <text class="tixing_count">99</text>
+      <text class="iconfont icon-tixing tixing"></text>
+    </view>
+    <view class="user-info" bindtap="toLogin">
+      <image class="userImg" src="/static/image/personal/missing-face.png"></image>
+      <text class="userName">注册/登录</text>
+    </view>
+    <view class="message">
+      <view class="message_header">
+        <text class="iconfont icon-wode"></text>
+        <text class="header_title">个人简介</text>
+      </view>
+      <view class="detail">
+        <text>此人还未写任何简介哟~~</text>
+      </view>
+    </view>
+  </view>
+  <!-- 个人页面主体部分 -->
+  <view 
+  class="cover-tainer"
+  bindtouchstart="touchStart"
+  bindtouchmove="touchMove"
+  bindtouchend="touchEnd"
+  style="transform: {{converTransfrom}}; transition: {{ converTransition ? converTransition : ''}};">
+    <image class="arc" src="/static/image/personal/arc.png"></image>
+    <view class="nav-section">
+      <view class="nav-item">
+        <text class="iconfont icon-lishi"></text>
+        <text>话题记录</text>
+      </view>
+      <view class="nav-item">
+        <text class="iconfont icon-xiaoxi"></text>
+        <text>回复我的</text>
+      </view>
+      <view class="nav-item">
+        <text class="iconfont icon-bianji"></text>
+        <text>个人编辑</text>
+      </view>
+    </view>
+    <!-- 主体部分列表 -->
+    <view class="personalContent">
+      <!-- 滑动块 -->
+      <view class="recentComment">
+        <text class="title">最近参与</text>
+        <swiper class="banner"
+        indicator-dots="true"
+        indicator-color="rgb(222, 210, 245)"
+        indicator-active-color="#846bff"
+        autoplay="true"
+        interval="4000"
+        duration="1000">
+          <swiper-item>
+            <image src="/static/image/personal/recentCommentBackGround.png"></image>
+            <text>#快来参与话题吧</text>
+          </swiper-item>
+          <swiper-item>
+            <image src="/static/image/personal/recentComment2.png"></image>
+            <text>#快来参与话题吧</text>
+          </swiper-item>
+        </swiper>
+      </view>
+      <!-- 列表 -->
+      <view class="cardList">
+        <view class="cardItem">
+          <text class="iconfont icon-shezhi"></text>
+          <text>账号安全</text>
+          <text class="more"> > </text>
+        </view>
+        <view class="cardItem">
+          <text class="iconfont icon-kefu"></text>
+          <text>在线客服</text>
+          <text class="more"> > </text>
+        </view>
+        <view class="cardItem">
+          <text class="iconfont icon-shuoming"></text>
+          <text>关于团队</text>
+          <text class="more"> > </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

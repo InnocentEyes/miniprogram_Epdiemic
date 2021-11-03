@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="LoginContainer">
+  <!-- 登录页面头部 -->
+  <view class="header">
+      <text>欢迎回来</text>
+  </view>
+  <!--登录表单-->
+  <view class="login">
+    <view class="Input-Item">
+      <text class="iconfont icon-wode title"></text>
+      <input type="text" id="phone" placeholder="请输入手机号" bindinput="changeInput"/>
+    </view>
+    <view class="Input-Item">
+      <text class="iconfont icon-wode title"></text>
+      <input type="safe-password" id="password" placeholder="请输入密码" bindinput="changeInput"/>
+    </view>
+    <checkbox checked="{{isChecked}}" bindtap="handleChange" class="checkbox">阅读并同意<text>用户协议</text>和<text>隐私政策</text></checkbox>
+    <button class="btn" style="background-color: {{isChecked ? '#846bff' : '#ded2f5'}};">确定登录</button>
+  </view>
+  <!-- 尾部 -->
+  <view class="footer">
+    还没有账号?
+    <text >马上注册</text>
+  </view>
+</view>

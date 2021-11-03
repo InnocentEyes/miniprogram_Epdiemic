@@ -1,0 +1,66 @@
+<!--pages/index/index.wxml-->
+<view class="indexContainer">
+  <!-- 头部 -->
+  <view class="indexHeader">
+    <text>截止至:</text>
+    <text class="currentTime">{{currentTime}}</text>
+    <text class="detailTime">{{detailTime}}</text>
+  </view>
+  <!-- 数据板块 -->
+  <view class="indexMessage">
+    <view class="messageItem" wx:for="{{message}}" wx:key="info">
+      <text class="title">较昨日<text class="detail" style="color: {{item.fontColor}};">+73</text></text>
+      <text class="number" style="color: {{item.fontColor}};">2806</text>
+      <text class="info">{{item.info}}</text>
+    </view>
+  </view>
+  <!-- 图片口号 -->
+  <image class="tipsImg" src="/static/image/index/index.jpg"></image>
+  <!-- 疫情图标展示 -->
+  <view class="graph">
+    <text class="graphTitle">国内疫情趋势</text>
+    <swiper class="graphSwiper">
+      <swiper-item>
+        <ec-canvas id="mychart-dom" canvas-id="mychart" ec="{{ec}}"></ec-canvas>
+      </swiper-item>
+    </swiper>
+    <scroll-view 
+    class="graphScroll"
+    enable-flex="true"
+    scroll-x="true"
+    scroll-into-view="{{'scroll'+ footId}}"
+    scroll-with-animation="true">
+      <view id="{{ 'scroll'+item.id }}" class="graphScrollItem" wx:for="{{message}}" wx:key="info">
+        <view data-id="{{item.id}}" class="Content {{ (footId == item.id) ? 'active' : '' }}" bindtap="changeFooter">
+          <text>{{item.info}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 省份表格展示 -->
+  <view class="dataList">
+    <view class="dataHeader">
+      <text class="header" style="background-color: #e3e7f3;">地区</text>
+      <text class="header" style="background-color: #f3bab0;">现存确诊</text>
+      <text class="header" style="background-color: #e69a8d;">累计确诊</text>
+      <text class="header" style="background-color: #b4c0d5;">死亡</text>
+      <text class="header" style="background-color: #95db9a;">治愈</text>
+    </view>
+    <view class="dataItemContainer">
+      <view class="dataItem">
+        <text class="data" bindtap="isShow"><text class="iconfont icon-liulan showDetail" style="color: {{isShow ? '#846bff' : ''}};"></text>内蒙古</text>
+        <text class="data">173</text>
+        <text class="data">606</text>
+        <text class="data">1</text>
+        <text class="data">432</text>
+      </view>
+      <view class="dataDetailItem" wx:if="{{isShow}}">
+        <text class="dataDetail">阿拉善盟</text>
+        <text class="dataDetail">146</text>
+        <text class="dataDetail">156</text>
+        <text class="dataDetail">0</text>
+        <text class="dataDetail">10</text>
+      </view>
+    </view>
+  </view>
+</view>

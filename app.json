@@ -1,0 +1,40 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/login/login",
+    "pages/personal/personal",
+    "pages/comment/comment",
+    "pages/index/index",
+    "pages/commentDetail/commentDetail",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#846bff",
+    "navigationBarTitleText": "在线疫情防控系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/comment/comment",
+      "text": "发现",
+      "iconPath": "/static/image/tabar/faxian.png",
+      "selectedIconPath": "/static/image/tabar/faxian_check.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "/static/image/tabar/shouye.png",
+      "selectedIconPath": "/static/image/tabar/shouye _check.png"
+    },{
+      "pagePath": "pages/personal/personal",
+      "text": "我的",
+      "iconPath": "/static/image/tabar/wode.png",
+      "selectedIconPath": "/static/image/tabar/wode_check.png"
+    }],
+    "color": "#444444",
+    "selectedColor": "#846bff",
+    "backgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

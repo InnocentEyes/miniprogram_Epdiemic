@@ -1,0 +1,167 @@
+/* pages/index/index.wxss */
+.indexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30rpx;
+}
+/* 首页头部 */
+.indexContainer .indexHeader{
+  margin-top: 58rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.indexHeader .currentTime{
+  width: 100%;
+  font-weight: bold;
+  font-size: 58rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.indexHeader .detailTime{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 38rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+/* 数据板块区域 */
+.indexMessage{
+  margin-top: 58rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.indexMessage .messageItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 160rpx;
+  width: 33%;
+  margin-top: 20rpx;
+}
+.indexMessage .messageItem text{
+  height: 33%;
+  line-height: 52.8rpx;
+}
+.indexMessage .messageItem .title{
+  font-size: 26rpx;
+}
+.indexMessage .messageItem .title .detail{
+  font-size: 20rpx;
+}
+.indexMessage .messageItem .number{
+  font-size: 58rpx;
+  font-weight: bold;
+}
+.indexMessage .messageItem .info{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+/* 图片口号 */
+.indexContainer .tipsImg{
+  margin-top: 58rpx;
+  width: 100%;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+/* 数据图表 */
+
+.indexContainer .graph{
+  width: 100%;
+  height: 600rpx;
+  margin-top: 58rpx;
+}
+.indexContainer .graph .graphTitle{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 38rpx;
+  padding-left: 20rpx;
+  border-left: 10rpx solid #4169e2;
+}
+.indexContainer .graph .graphSwiper{
+  height: 450rpx;
+}
+.indexContainer .graph .graphSwiper ec-canvas{
+  width: 100%;
+  height: 100%;
+}
+.indexContainer .graph .graphScroll{
+  height: 100rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.indexContainer .graph .graphScroll .graphScrollItem{
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.indexContainer .graph .graphScroll .graphScrollItem .active{
+  color: #4169e2;
+}
+.indexContainer .dataList{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  margin-top: 20rpx;
+}
+.indexContainer .dataList .dataHeader{
+  width: 100%;
+  display: flex;
+}
+.indexContainer .dataList .dataHeader .header{
+  width: 20%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  border-right: 2rpx solid #ffffff;
+  font-weight: bold;
+}
+.indexContainer .dataList .dataItemContainer{
+  display: flex;
+  flex-direction: column;
+}
+.dataItemContainer .dataItem{
+  display: flex;
+  width: 100%;
+}
+.dataItemContainer .dataItem .data{
+  width: 20%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+  text-align: right;
+  font-size: 25rpx;
+  padding:10rpx;
+}
+.dataItemContainer .dataItem .data:first-child{
+  text-align: center;
+}
+.dataItemContainer .dataItem .data .showDetail{
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  margin-right: 10rpx;
+}
+.dataItemContainer .dataDetailItem{
+  display: flex;
+  width: 100%;
+}
+.dataItemContainer .dataDetailItem .dataDetail{
+  width: 20%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  font-size: 25rpx;
+  padding:10rpx;
+}
+.dataItemContainer .dataDetailItem .dataDetail:first-child{
+  padding: 10rpx 10rpx 10rpx 20rpx;
+  text-align: center;
+}
