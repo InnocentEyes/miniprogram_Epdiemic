@@ -4,7 +4,7 @@
   <view class="header">
     <text class="title">发现</text>
     <view class="search">
-      <input type="text" placeholder="最新出行防疫政策" placeholder-class="placeholder" bindtap="toSearch"/>
+      <input type="text" placeholder="查询省市疫情数据" placeholder-class="placeholder" bindtap="toSearch"/>
       <text class="iconfont icon-chazhao searchIcon"></text>
     </view>
   </view>

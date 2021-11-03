@@ -16,7 +16,7 @@ Page({
 
   toLogin: function(){
     wx.navigateTo({
-      url: '/pages/login/login',
+      url: '/childPackage/pages/login/login'
     })
   },
 

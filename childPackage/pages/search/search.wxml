@@ -1,0 +1,118 @@
+<!--pages/search/search.wxml-->
+<view class="searchContainer">
+  <view class="header">
+    <view class="searchInput">
+      <text class="iconfont icon-chazhao searchIcon"></text>
+      <input type="text" placeholder="疫情数据" placeholder-class="placeholder" />
+    </view>
+    <text class="cancel">取消</text>
+  </view>
+
+  <view class="hotContainer">
+    <view class="title">
+      疫情数据排行榜
+    </view>
+    <view class="hotList">
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text>美国加利福尼亚州</text>
+        <text class="data">10000</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,12 +1,9 @@
 {
   "entryPagePath": "pages/index/index",
   "pages": [
-    "pages/login/login",
     "pages/personal/personal",
     "pages/comment/comment",
-    "pages/index/index",
-    "pages/commentDetail/commentDetail",
-    "pages/search/search"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,5 +33,13 @@
     "backgroundColor": "#ffffff"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "subPackages": [{
+   "root": "childPackage",
+   "pages": [
+     "pages/login/login",
+     "pages/commentDetail/commentDetail",
+     "pages/search/search"
+   ]
+  }]
 }

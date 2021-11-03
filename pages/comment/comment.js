@@ -1,4 +1,6 @@
 // pages/comment/comment.js
+
+
 Page({
 
   /**
@@ -46,14 +48,13 @@ Page({
 
   toSearch: function(){
     wx.navigateTo({
-      url: '/pages/search/search',
+      url: '/childPackage/pages/search/search'
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   changeNav: function(event){
