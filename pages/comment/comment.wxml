@@ -52,7 +52,7 @@
               <view class="item">
                 <text class="iconfont icon-dianzan"></text>
               </view>
-              <view class="item">
+              <view class="item" bindtap="toCommentDetail">
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
@@ -74,7 +74,7 @@
               <view class="item">
                 <text class="iconfont icon-dianzan"></text>
               </view>
-              <view class="item">
+              <view class="item" bindtap="toCommentDetail">
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
@@ -96,7 +96,7 @@
               <view class="item">
                 <text class="iconfont icon-dianzan"></text>
               </view>
-              <view class="item">
+              <view class="item" bindtap="toCommentDetail">
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
@@ -118,7 +118,7 @@
               <view class="item">
                 <text class="iconfont icon-dianzan"></text>
               </view>
-              <view class="item">
+              <view class="item" bindtap="toCommentDetail">
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
@@ -140,7 +140,7 @@
               <view class="item">
                 <text class="iconfont icon-dianzan"></text>
               </view>
-              <view class="item">
+              <view class="item" bindtap="toCommentDetail">
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">

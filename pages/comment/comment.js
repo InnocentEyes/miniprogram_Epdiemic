@@ -57,6 +57,12 @@ Page({
   onLoad: function (options) {
   },
 
+  toCommentDetail: function(){
+    wx.navigateTo({
+      url: '/childPackage/pages/commentDetail/commentDetail',
+    })
+  },
+
   changeNav: function(event){
     let navId = event.currentTarget.id;
     this.setData({

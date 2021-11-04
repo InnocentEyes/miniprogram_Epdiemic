@@ -1,2 +1,58 @@
 <!--pages/commentDetail/commentDetail.wxml-->
-<text>pages/commentDetail/commentDetail.wxml</text>
+<view class="commentDetailContainer">
+  <view class="header">
+    <image src="/static/image/comment/love.png"></image>
+    <view class="headerMessage">
+      <text class="userName">邱泽林</text>
+      <text class="userMessage">珠海科技学院计算机科学与技术学生一枚</text>
+    </view>
+  </view>
+  <view class="commentDetail">
+    <text class="comment">
+      也许他们会明白莫泊桑的一句话，生活可能不像你想象的那么好，但是也不会像你想象的那么糟，人的脆弱和坚强都超乎了自己的想象，有时候可能脆弱的一句话就泪流满面，有时候你发现自己咬着牙已经走过了很长的路。加油!
+    </text>
+  </view>
+  <view class="otherUserCommentList">
+    <text class="title">评论(5)</text>
+    <scroll-view 
+    class="otherScroll"
+    scroll-y="true">
+      <view class="otherItem">
+        <image src="/static/image/personal/missing-face.png"></image>
+        <text class="otherUserName">dxy_z3dfjzor</text>
+        <text class="otherUserComment">一定要吃早饭,不然就等于吸收屎里的营养。</text>
+        <text class="curentTime">昨天 12:14</text>
+      </view>
+      <view class="otherItem">
+        <image src="/static/image/personal/missing-face.png"></image>
+        <text class="otherUserName">dxy_z3dfjzor</text>
+        <text class="otherUserComment">一定要吃早饭,不然就等于吸收屎里的营养。</text>
+        <text class="curentTime">昨天 12:14</text>
+      </view>
+      <view class="otherItem">
+        <image src="/static/image/personal/missing-face.png"></image>
+        <text class="otherUserName">dxy_z3dfjzor</text>
+        <text class="otherUserComment">一定要吃早饭,不然就等于吸收屎里的营养。</text>
+        <text class="curentTime">昨天 12:14</text>
+      </view>
+      <view class="otherItem">
+        <image src="/static/image/personal/missing-face.png"></image>
+        <text class="otherUserName">dxy_z3dfjzor</text>
+        <text class="otherUserComment">一定要吃早饭,不然就等于吸收屎里的营养。</text>
+        <text class="curentTime">昨天 12:14</text>
+      </view>
+      <view class="otherItem">
+        <image src="/static/image/personal/missing-face.png"></image>
+        <text class="otherUserName">dxy_z3dfjzor</text>
+        <text class="otherUserComment">一定要吃早饭,不然就等于吸收屎里的营养。</text>
+        <text class="curentTime">昨天 12:14</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="footer">
+    <view class="sendComment">
+      <input type="text" placeholder="写下你的精彩评论吧~"  placeholder-class="placeholder"/>
+      <text class="iconfont icon-pinglun commentIcon"></text>
+    </view>
+  </view>
+</view>
