@@ -39,6 +39,28 @@
       class="commentScroll"
       scroll-y="true"
       >
+      <view class="commentItem">
+          <view class="commentHeader" >
+            <image class="userImg" src="/static/image/comment/love.png"></image>
+            <text class="userName">qzlzzz</text>
+          </view>
+          <view class="commentContent">
+            <view class="Content">
+              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
+            </view>
+            <view class="commentFoot">
+              <view class="item">
+                <text class="iconfont icon-dianzan"></text>
+              </view>
+              <view class="item" bindtap="toCommentDetail">
+                <text class="iconfont icon-xiaoxi"></text>
+              </view>
+              <view class="item">
+                <button class="iconfont icon-fenxiang" open-type="share"></button>
+              </view>
+            </view>
+          </view>
+        </view>
         <view class="commentItem">
           <view class="commentHeader">
             <image class="userImg" src="/static/image/comment/love.png"></image>
@@ -56,13 +78,13 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <text class="iconfont icon-fenxiang"></text>
+                <button class="iconfont icon-fenxiang"></button>
               </view>
             </view>
           </view>
         </view>
         <view class="commentItem">
-          <view class="commentHeader" style="background-color: #feb447;">
+          <view class="commentHeader">
             <image class="userImg" src="/static/image/comment/love.png"></image>
             <text class="userName">qzlzzz</text>
           </view>
@@ -78,13 +100,13 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <text class="iconfont icon-fenxiang"></text>
+                <button class="iconfont icon-fenxiang"></button>
               </view>
             </view>
           </view>
         </view>
         <view class="commentItem">
-          <view class="commentHeader" style="background-color: #447dc5;">
+          <view class="commentHeader">
             <image class="userImg" src="/static/image/comment/love.png"></image>
             <text class="userName">qzlzzz</text>
           </view>
@@ -100,13 +122,13 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <text class="iconfont icon-fenxiang"></text>
+                <button class="iconfont icon-fenxiang"></button>
               </view>
             </view>
           </view>
         </view>
-        <view class="commentItem" >
-          <view class="commentHeader" style="background-color: #846bff;">
+        <view class="commentItem">
+          <view class="commentHeader">
             <image class="userImg" src="/static/image/comment/love.png"></image>
             <text class="userName">qzlzzz</text>
           </view>
@@ -122,51 +144,7 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <text class="iconfont icon-fenxiang"></text>
-              </view>
-            </view>
-          </view>
-        </view>
-        <view class="commentItem">
-          <view class="commentHeader" style="background-color:#feb447 ;">
-            <image class="userImg" src="/static/image/comment/love.png"></image>
-            <text class="userName">qzlzzz</text>
-          </view>
-          <view class="commentContent">
-            <view class="Content">
-              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
-            </view>
-            <view class="commentFoot">
-              <view class="item">
-                <text class="iconfont icon-dianzan"></text>
-              </view>
-              <view class="item" bindtap="toCommentDetail">
-                <text class="iconfont icon-xiaoxi"></text>
-              </view>
-              <view class="item">
-                <text class="iconfont icon-fenxiang"></text>
-              </view>
-            </view>
-          </view>
-        </view>
-        <view class="commentItem">
-          <view class="commentHeader" style="background-color: #447dc5;">
-            <image class="userImg" src="/static/image/comment/love.png"></image>
-            <text class="userName">qzlzzz</text>
-          </view>
-          <view class="commentContent">
-            <view class="Content">
-              <text>生活可能不像你想象的那么好，但是也不会像你想象的那么糟。</text>
-            </view>
-            <view class="commentFoot">
-              <view class="item">
-                <text class="iconfont icon-dianzan"></text>
-              </view>
-              <view class="item">
-                <text class="iconfont icon-xiaoxi"></text>
-              </view>
-              <view class="item">
-                <text class="iconfont icon-fenxiang"></text>
+                <button class="iconfont icon-fenxiang"></button>
               </view>
             </view>
           </view>

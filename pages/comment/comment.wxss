@@ -140,6 +140,7 @@
   border-bottom: 2rpx solid #dfdfdf;
 }
 .commentItem .commentContent .Content{
+  display: block;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;/* 评论只允许3行 */
@@ -158,4 +159,12 @@
 }
 .commentItem .commentContent .commentFoot .item text{
   font-size: 38rpx;
+}
+.commentItem .commentContent .commentFoot .item button{
+  width: 100%;
+  background-color: #fff;
+  line-height: 60rpx;
+  font-size: 38rpx;
+  padding: 0;
+  text-align: center;
 }

@@ -115,6 +115,19 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    return {
+      title: '在线疫情防控系统',
+      page: '/pages/comment/comment',
+    }
+  },
 
+  /**
+   * 还要再改进
+   */
+  onShareTimeline: function(){
+    return{
+      title: '在线疫情防控系统',
+      page: '/pages/comment/comment'
+    }
   }
 })

@@ -1,5 +1,6 @@
 /* pages/index/index.wxss */
 .indexContainer{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,3 +166,4 @@
   padding: 10rpx 10rpx 10rpx 20rpx;
   text-align: center;
 }
+

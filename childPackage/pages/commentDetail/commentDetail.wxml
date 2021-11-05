@@ -8,7 +8,7 @@
     </view>
   </view>
   <view class="commentDetail">
-    <text class="comment">
+    <text class="comment" user-select="true">
       也许他们会明白莫泊桑的一句话，生活可能不像你想象的那么好，但是也不会像你想象的那么糟，人的脆弱和坚强都超乎了自己的想象，有时候可能脆弱的一句话就泪流满面，有时候你发现自己咬着牙已经走过了很长的路。加油!
     </text>
   </view>
