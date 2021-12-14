@@ -116,7 +116,7 @@
   display: flex;
 }
 .indexContainer .dataList .dataHeader .header{
-  width: 20%;
+  width: 18%;
   height: 100rpx;
   text-align: center;
   line-height: 100rpx;
@@ -124,46 +124,34 @@
   border-right: 2rpx solid #ffffff;
   font-weight: bold;
 }
-.indexContainer .dataList .dataItemContainer{
+.indexContainer .dataList .dataHeader .header:first-child{
+  flex: 1;
+}
+.dataItem{
   display: flex;
   flex-direction: column;
 }
-.dataItemContainer .dataItem{
+.dataItem .provinceData{
   display: flex;
-  width: 100%;
+  height: 80rpx;
 }
-.dataItemContainer .dataItem .data{
-  width: 20%;
-  height: 100rpx;
-  line-height: 100rpx;
-  font-weight: bold;
+.dataItem .data{
+  width: 18%;
   text-align: right;
   font-size: 25rpx;
-  padding:10rpx;
-}
-.dataItemContainer .dataItem .data:first-child{
-  text-align: center;
-}
-.dataItemContainer .dataItem .data .showDetail{
-  display: inline-block;
-  font-size: 28rpx;
-  line-height: 100rpx;
+  line-height: 80rpx;
   margin-right: 10rpx;
 }
-.dataItemContainer .dataDetailItem{
-  display: flex;
-  width: 100%;
-}
-.dataItemContainer .dataDetailItem .dataDetail{
-  width: 20%;
-  height: 100rpx;
-  line-height: 100rpx;
-  text-align: right;
+.dataItem .dhata{
+  width: 28%;
   font-size: 25rpx;
-  padding:10rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 80rpx;
+  font-weight: bolder;
 }
-.dataItemContainer .dataDetailItem .dataDetail:first-child{
-  padding: 10rpx 10rpx 10rpx 20rpx;
-  text-align: center;
+.dataItem .cityData{
+  display: flex;
+  height: 80rpx;
 }
 

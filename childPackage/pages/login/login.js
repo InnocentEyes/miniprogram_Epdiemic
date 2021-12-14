@@ -1,4 +1,7 @@
 // pages/login/login.js
+
+import request from '../../../utils/request';
+
 Page({
 
   /**
@@ -21,6 +24,39 @@ Page({
     this.setData({
       isChecked
     })
+  },
+
+  sendMessage: async function(){
+    if(!this.data.isChecked){
+      return;
+    }
+    let {password,phone} = this.data;
+    if(!phone){
+      wx.showToast({
+        title: '手机号不能为空',
+        icon: 'none',
+      })
+      return;
+    }
+    //手机号的正则表达式
+    let phoneReg = /^1(3\d|4[5-9]|5[0-35-9]|6[2567]|7[0-8]|8\d|9[0-35-9])\d{8}$/;
+    if(!phoneReg.test(phone)){
+      wx.showToast({
+        title: '手机号格式错误',
+        icon: 'none',
+      })
+      return;
+    }
+    if(!password){
+      wx.showToast({
+        title: '密码不能为空',
+        icon: 'none',
+      })
+      return;
+    }
+    //后端验证
+    let result = await request('/login',{password,phone,isLogin: true},'POST');
+    console.log(result);
   },
 
   /**

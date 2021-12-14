@@ -9,8 +9,8 @@
   <!-- 数据板块 -->
   <view class="indexMessage">
     <view class="messageItem" wx:for="{{message}}" wx:key="info">
-      <text class="title">较昨日<text class="detail" style="color: {{item.fontColor}};">+73</text></text>
-      <text class="number" style="color: {{item.fontColor}};">2806</text>
+      <text class="title">较昨日<text class="detail" style="color: {{item.fontColor}};">+0</text></text>
+      <text class="number" style="color: {{item.fontColor}};">{{item.count}}</text>
       <text class="info">{{item.info}}</text>
     </view>
   </view>
@@ -46,20 +46,20 @@
       <text class="header" style="background-color: #b4c0d5;">死亡</text>
       <text class="header" style="background-color: #95db9a;">治愈</text>
     </view>
-    <view class="dataItemContainer">
-      <view class="dataItem">
-        <text class="data" bindtap="isShow"><text class="iconfont icon-liulan showDetail" style="color: {{isShow ? '#846bff' : ''}};"></text>内蒙古</text>
-        <text class="data">173</text>
-        <text class="data">606</text>
-        <text class="data">1</text>
-        <text class="data">432</text>
+    <view class="dataItem" wx:for="{{dataList}}" wx:key="locationId">
+      <view class="provinceData">
+        <text class="dhata">{{item.provinceName}}</text>
+        <text class="data">{{item.currentConfirmedCount}}</text>
+        <text class="data">{{item.confirmedCount}}</text>
+        <text class="data">{{item.deadCount}}</text>
+        <text class="data">{{item.curedCount}}</text>
       </view>
-      <view class="dataDetailItem" wx:if="{{isShow}}">
-        <text class="dataDetail">阿拉善盟</text>
-        <text class="dataDetail">146</text>
-        <text class="dataDetail">156</text>
-        <text class="dataDetail">0</text>
-        <text class="dataDetail">10</text>
+      <view class="cityData" wx:for="{{item.cities}}">
+        <text class="dhata">{{item.cityName}}</text>
+        <text class="data">{{item.currentConfirmedCount}}</text>
+        <text class="data">{{item.confirmedCount}}</text>
+        <text class="data">{{item.deadCount}}</text>
+        <text class="data">null</text>
       </view>
     </view>
   </view>

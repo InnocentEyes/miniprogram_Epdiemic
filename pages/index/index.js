@@ -1,8 +1,8 @@
 // pages/index/index.js
 //引入 echarts.js
 const OPTION = require('../../utils/utils')
-import { RFC_2822 } from "moment";
 import * as echarts from "../../ec-canvas/echarts"
+import request from '../../utils/request'
 let chart = null;
 const time = require('../../utils/utils');
 //index页需要用到echarts-for-wexin
@@ -14,8 +14,14 @@ Page({
     currentTime: '',
     detailTime: '',//现在的时间
     footId: '1',//被选中的id,默认为1
-    isShow: false,//是否展示数据，默认是否
-    message: [{id: 1,fontColor: '#f74c31',info: '现存确诊'},{id: 2,fontColor: '#f78207',info: '境外输入'},{id: 3,fontColor: '#a25a4e',info: '现存无症状'},{id: 4,fontColor: '#ae212c',info: '累计确诊'},{id: 5, fontColor: '#8795ae',info: '累计死亡'},{id: 6,fontColor: '#28b7a3',info: '累计治愈'}],
+    isShow: '1',//是否展示数据，默认是否
+    dataList: [],
+    message: [{id: 1,fontColor: '#f74c31',info: '现存确诊'},
+              {id: 2,fontColor: '#f78207',info: '境外输入'},
+              {id: 3,fontColor: '#a25a4e',info: '现存无症状'},
+              {id: 4,fontColor: '#ae212c',info: '累计确诊'},
+              {id: 5, fontColor: '#8795ae',info: '累计死亡'},
+              {id: 6,fontColor: '#28b7a3',info: '累计治愈'}],
     ec: {
       onInit: function (canvas,width,height,dpr) {
                 chart = echarts.init(canvas,null,{
@@ -31,8 +37,8 @@ Page({
     
   },
 
-  isShow: function(){
-    let isShow  = !this.data.isShow;
+  isShow: function(event){
+    let isShow  = event.currentTarget.dataset;
     this.setData({
       isShow
     })
@@ -63,6 +69,47 @@ Page({
    */
   onLoad: function (options) {
     this.getcurrentTime();
+    this.getEpidemicData();
+  },
+
+  getEpidemicData: async function(){
+      let allData = await request('/all');
+      this.getHeaderData(allData);
+      this.setData({
+        dataList: allData,
+      });
+  },
+
+  getHeaderData: function(dataList){
+    let currentConfirmedCount = 0;//现存确诊
+    let aboard = 0;//境外输入
+    let deadCount = 0;//累计死亡
+    let confirmedCount = 0;//累计确诊
+    let curedCount = 0;//累计治愈
+    dataList.map(item =>{
+      currentConfirmedCount += item.currentConfirmedCount;
+      if(item.cities.length > 0){
+        if(item.cities[0].cityName == "境外输入"){
+          aboard += item.cities[0].confirmedCount;
+        }
+      }
+      deadCount += item.deadCount;
+      confirmedCount += item.confirmedCount;
+      curedCount += item.curedCount;
+      return item;
+    });
+    let headerData = [currentConfirmedCount,aboard,445,confirmedCount,deadCount,curedCount];//现存无症状需要改善
+    let data = wx.getStorageSync('data');
+    if(data){
+
+    }
+    let message = this.data.message;
+    for(let i = 0 ; i < message.length ; i++){
+      message[i].count = headerData[i];
+    }
+    this.setData({
+      message
+    });
   },
 
   /**
