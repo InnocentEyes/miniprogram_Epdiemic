@@ -12,7 +12,7 @@
     </view>
     <view class="Input-Item">
       <text class="iconfont icon-wode title"></text>
-      <input type="safe-password" id="password" placeholder="请输入密码" bindinput="changeInput"/>
+      <input type="safe-password" value="{{password}}" id="password" placeholder="请输入密码" bindinput="changeInput"/>
     </view>
     <checkbox checked="{{isChecked}}" bindtap="handleChange" class="checkbox">阅读并同意<text>用户协议</text>和<text>隐私政策</text></checkbox>
     <button class="btn" bindtap="sendMessage" style="background-color: {{isChecked ? '#846bff' : '#ded2f5'}};">确定登录</button>

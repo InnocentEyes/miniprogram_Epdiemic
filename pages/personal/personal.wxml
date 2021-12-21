@@ -9,7 +9,7 @@
     </view>
     <view class="user-info" bindtap="toLogin">
       <image class="userImg" src="/static/image/personal/missing-face.png"></image>
-      <text class="userName">注册/登录</text>
+      <text class="userName">{{ userInfo.Name ? userInfo.Name : (userInfo.userPhoneNumber ? userInfo.userPhoneNumber : '注册/登录') }}</text>
     </view>
     <view class="message">
       <view class="message_header">

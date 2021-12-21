@@ -56,7 +56,26 @@ Page({
     }
     //后端验证
     let result = await request('/login',{password,phone,isLogin: true},'POST');
-    console.log(result);
+    if(result.data.code == 302){
+      wx.showToast({
+        title: '密码错误',
+        icon: 'error',
+      })
+      this.setData({
+        password: '',
+      })
+      return;
+    }
+    if(result.statusCode == 200){
+      wx.showToast({
+        title: '登录成功',
+        icon: 'success',
+      })
+      wx.setStorageSync('userInfo', result.data);
+      wx.reLaunch({
+        url: '/pages/index/index',
+      })
+    }
   },
 
   /**

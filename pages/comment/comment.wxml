@@ -78,7 +78,7 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <button class="iconfont icon-fenxiang"></button>
+                <button class="iconfont icon-fenxiang" open-type="share"></button>
               </view>
             </view>
           </view>
@@ -100,7 +100,7 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <button class="iconfont icon-fenxiang"></button>
+                <button class="iconfont icon-fenxiang" open-type="share"></button>
               </view>
             </view>
           </view>
@@ -122,7 +122,7 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <button class="iconfont icon-fenxiang"></button>
+                <button class="iconfont icon-fenxiang" open-type="share"></button>
               </view>
             </view>
           </view>
@@ -144,7 +144,7 @@
                 <text class="iconfont icon-xiaoxi"></text>
               </view>
               <view class="item">
-                <button class="iconfont icon-fenxiang"></button>
+                <button class="iconfont icon-fenxiang" open-type="share"></button>
               </view>
             </view>
           </view>

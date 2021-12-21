@@ -12,9 +12,13 @@ Page({
   data: {
     converTransfrom: 'translateY(0rpx)',
     converTransition: '',
+    userInfo: '',
   },
 
   toLogin: function(){
+    if(wx.getStorageSync('token')){
+      return;
+    }
     wx.navigateTo({
       url: '/childPackage/pages/login/login'
     })
@@ -52,7 +56,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if(wx.getStorageSync('userInfo')){
+      this.setData({
+        userInfo: wx.getStorageSync('userInfo'),
+      })
+    }
   },
 
   /**

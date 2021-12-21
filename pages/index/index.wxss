@@ -130,6 +130,7 @@
 .dataItem{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .dataItem .provinceData{
   display: flex;
@@ -142,13 +143,39 @@
   line-height: 80rpx;
   margin-right: 10rpx;
 }
+.dataItem .dataclid{
+  width: 18%;
+  text-align: right;
+  font-size: 21rpx;
+  line-height: 80rpx;
+  margin-right: 10rpx;
+}
+.dataItem .show{
+  position: absolute;
+  top: 35rpx;
+  left: 20rpx;
+  width: 15rpx;
+  height: 15rpx;
+  transform: rotate(90deg);
+  transform: transform 0.5s linear;
+}
+
+.showRotate{
+  transform: rotate(180deg);
+}
+
 .dataItem .dhata{
   width: 28%;
-  font-size: 25rpx;
+  font-size: 20rpx;
   text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 80rpx;
+  text-align: center;
   font-weight: bolder;
+}
+.dataItem .provinceName{
+  text-align: center;
+  font-size: 26rpx;
 }
 .dataItem .cityData{
   display: flex;

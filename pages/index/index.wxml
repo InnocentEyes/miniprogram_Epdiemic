@@ -1,4 +1,5 @@
 <!--pages/index/index.wxml-->
+<wxs src="./index.wxs" module="index"/>
 <view class="indexContainer">
   <!-- 头部 -->
   <view class="indexHeader">
@@ -9,7 +10,7 @@
   <!-- 数据板块 -->
   <view class="indexMessage">
     <view class="messageItem" wx:for="{{message}}" wx:key="info">
-      <text class="title">较昨日<text class="detail" style="color: {{item.fontColor}};">+0</text></text>
+      <text class="title">较昨日<text class="detail" style="color: {{item.fontColor}};">{{ item.changeData >= 0 ? ('+'+item.changeData) : item.changeData }}</text></text>
       <text class="number" style="color: {{item.fontColor}};">{{item.count}}</text>
       <text class="info">{{item.info}}</text>
     </view>
@@ -48,20 +49,22 @@
     </view>
     <view class="dataItem" wx:for="{{dataList}}" wx:key="locationId">
       <view class="provinceData">
-        <text class="dhata">{{item.provinceName}}</text>
+        <image src="../../static/image/index/wx-list.png" class="show {{ isShow ? 'showRotate' : '' }}"></image>
+        <text class="dhata provinceName" data-id="{{item.locationId}}" bindtap="showChange">{{item.provinceShortName}}</text>
         <text class="data">{{item.currentConfirmedCount}}</text>
         <text class="data">{{item.confirmedCount}}</text>
         <text class="data">{{item.deadCount}}</text>
         <text class="data">{{item.curedCount}}</text>
       </view>
-      <view class="cityData" wx:for="{{item.cities}}">
+      <block wx:if="{{ index.check(locationIds,item.locationId) }}">
+        <view class="cityData" wx:for="{{item.cities}}">
         <text class="dhata">{{item.cityName}}</text>
-        <text class="data">{{item.currentConfirmedCount}}</text>
-        <text class="data">{{item.confirmedCount}}</text>
-        <text class="data">{{item.deadCount}}</text>
-        <text class="data">null</text>
-      </view>
+        <text class="dataclid">{{item.currentConfirmedCount}}</text>
+        <text class="dataclid">{{item.confirmedCount}}</text>
+        <text class="dataclid">{{item.deadCount}}</text>
+        <text class="dataclid">unfind</text>
+        </view>
+      </block>
     </view>
   </view>
 </view>
-

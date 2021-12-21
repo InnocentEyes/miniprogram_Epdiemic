@@ -42,10 +42,10 @@
         <text class="curentTime">昨天 12:14</text>
       </view>
       <view class="otherItem">
-        <image src="/static/image/personal/missing-face.png"></image>
+        <!-- <image src="/static/image/personal/missing-face.png"></image>
         <text class="otherUserName">dxy_z3dfjzor</text>
         <text class="otherUserComment">一定要吃早饭,不然就等于吸收屎里的营养。</text>
-        <text class="curentTime">昨天 12:14</text>
+        <text class="curentTime">昨天 12:14</text> -->
       </view>
     </scroll-view>
   </view>

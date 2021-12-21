@@ -58,6 +58,11 @@ Page({
   },
 
   toCommentDetail: function(){
+    if(!wx.getStorageSync('token')){
+      wx.navigateTo({
+        url: '/childPackage/pages/login/login',
+      })
+    }
     wx.navigateTo({
       url: '/childPackage/pages/commentDetail/commentDetail',
     })
