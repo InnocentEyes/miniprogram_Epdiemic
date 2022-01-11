@@ -9,10 +9,13 @@ export default (url,data={},method='GET') => {
     wx.request({
       url: config.host+url,//在本机上测试时使用localhost网址,在移动端测试时使用内网穿透地址
       data: data,
-      header: wx.getStorageSync('token') ? wx.getStorageSync('token') : '',
+      header: {
+        token: wx.getStorageSync('token') ? wx.getStorageSync('token') : ''
+      },
       dataType: 'json',
       method: method,
       success: (res)=>{
+        console.log(res);
         if(data.isLogin){
           if(res.header.user_token){
             wx.setStorage({
@@ -25,6 +28,11 @@ export default (url,data={},method='GET') => {
       },
       fail: (err)=>{
         console.log(err);
+        wx.hideLoading();
+        wx.showToast({
+          title: '数据加载失败',
+          icon: 'error'
+        })
         rejects(err);
       }
     })

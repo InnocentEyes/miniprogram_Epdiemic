@@ -1,5 +1,6 @@
 // pages/comment/comment.js
 
+import request from '../../utils/request'
 
 Page({
 
@@ -8,42 +9,22 @@ Page({
    */
   data: {
     //初始值用于测试
-    commentList: [
-      {
-        id: 0,
-        title: '护眼攻略',
-      },
-      {
-        id: 1,
-        title: '出门防护手段',
-      },
-      {
-        id: 2,
-        title: '吃出健康生活',
-      },
-      {
-        id: 3,
-        title: '人人都有好肠胃',
-      },
-      {
-        id: 4,
-        title: '生活中如何缓解压力',
-      },
-      {
-        id: 5,
-        title: '疫苗那些事儿',
-      },
-      {
-        id: 6,
-        title: '急救宝典',
-      },
-      {
-        id: 7,
-        title: '和慢性病和平相处',
-      }
-    ],
+    commentList: [],
     navId: '0',
     commentColor: ['#846bff','#feb447','#447dc5'],
+  },
+
+  getTypes: async function(){
+    let res  = await request('/mobile/types?count=1',{isLogin: false})
+    let commentList = res.data;
+    if(commentList.status == 'SUCCESSFUL'){
+      this.setData({
+        navId: commentList.result[0].typeNo,
+        commentList: commentList.result
+      })
+    }else{
+      console.error("请求失败");
+    }
   },
 
   toSearch: function(){
@@ -55,6 +36,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(!wx.getStorageSync('token')){
+      wx.reLaunch({
+        url: '/childPackage/pages/login/login',
+      })
+    }
+    this.getTypes();
   },
 
   toCommentDetail: function(){

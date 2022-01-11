@@ -10,7 +10,7 @@
   <!-- 数据板块 -->
   <view class="indexMessage">
     <view class="messageItem" wx:for="{{message}}" wx:key="info">
-      <text class="title">较昨日<text class="detail" style="color: {{item.fontColor}};">{{ item.changeData >= 0 ? ('+'+item.changeData) : item.changeData }}</text></text>
+      <text class="title">较昨日<text class="detail" style="color: {{item.fontColor}};">{{ item.changeData >= 0 ? ('+'+item.changeData) : (item.changeData ? item.changeData : '+0') }}</text></text>
       <text class="number" style="color: {{item.fontColor}};">{{item.count}}</text>
       <text class="info">{{item.info}}</text>
     </view>
@@ -49,7 +49,7 @@
     </view>
     <view class="dataItem" wx:for="{{dataList}}" wx:key="locationId">
       <view class="provinceData">
-        <image src="../../static/image/index/wx-list.png" class="show {{ isShow ? 'showRotate' : '' }}"></image>
+        <image src="../../static/image/index/wx-list.png" class="show {{ isShow ? 'showRotate' : '' }}" wx:if="{{ item.cities.length > 0}}"></image>
         <text class="dhata provinceName" data-id="{{item.locationId}}" bindtap="showChange">{{item.provinceShortName}}</text>
         <text class="data">{{item.currentConfirmedCount}}</text>
         <text class="data">{{item.confirmedCount}}</text>

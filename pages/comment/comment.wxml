@@ -28,9 +28,9 @@
         class="navItem" 
         wx:for="{{commentList}}" 
         wx:key="id"
-        id="{{ 'scroll'+item.id }}">
-          <view id="{{item.id}}" class="navContent {{ (navId == item.id) ? 'active' : '' }}" bindtap="changeNav">
-            {{item.title}}
+        id="{{ 'scroll'+item.typeNo }}">
+          <view id="{{item.typeNo}}" class="navContent {{ (navId == item.typeNo) ? 'active' : '' }}" bindtap="changeNav">
+            {{item.typeName}}
           </view>
         </view>
       </scroll-view>

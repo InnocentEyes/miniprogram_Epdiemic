@@ -72,6 +72,7 @@ Page({
         icon: 'success',
       })
       wx.setStorageSync('userInfo', result.data);
+      wx.setStorageSync('token', result.header.user_token)
       wx.reLaunch({
         url: '/pages/index/index',
       })
