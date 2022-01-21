@@ -1,0 +1,26 @@
+.title{
+    color: mediumslateblue;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 20rpx;
+    font-weight: 700;
+}
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth,
+.seventh,
+.eighth,
+.ninth{
+    margin-top: 70rpx;
+    font-size: 28rpx;
+     font-weight: 700;
+}
+.detail
+{
+    font-size: 23rpx;
+    margin-top: 30rpx;
+   
+}

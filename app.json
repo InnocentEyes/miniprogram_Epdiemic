@@ -39,7 +39,8 @@
    "pages": [
      "pages/login/login",
      "pages/commentDetail/commentDetail",
-     "pages/search/search"
+     "pages/search/search",
+     "pages/clickdata/clickdata"
    ]
   }]
 }

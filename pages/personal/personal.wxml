@@ -1,5 +1,35 @@
 <!--pages/personal/personal.wxml-->
+<!-- 个人编辑模态框 -->
 <view class="personalContainer">
+  <view class="individual_editer" style="visibility:{{visibility}}">
+    <view class="centerbox">
+        <view class="editer">
+            <text class="close" bindtap="closebutton">×</text>
+            <image class="image" src="/static/image/personal/missing-face.png"></image>
+            <form bindsubmit='sumbitbutton'>
+                <label class="userlabel">user</label>
+                <input type="text" class="userinput" name="userinput" value="{{userInfo.userName}}" bindinput="getuservalue"  style="border-color:{{bordercolor[0]}};"/> 
+                <label class="phonelabel" >phone</label>
+                <input type="text" class="phoneinput" name="phoneinput" value="{{userInfo.userPhoneNumber}}" bindinput='getphonevalue'  style="border-color:{{bordercolor[1]}};"/> 
+                <label class="passwordlabel">password</label>
+                <input type="password" class="passwordinput" name="passwordinput" value="{{userInfo.Password}}" bindinput='getpasswordvalue' maxlength="6" style="border-color:{{bordercolor[2]}};"/> 
+                <label class="resumelabel">resume</label>
+                <textarea class="resumearea" maxlength="40" name="resumearea"></textarea>
+                <button class="sumbit" formType="submit" type='primary'>提交</button>
+            </form>
+           
+        </view>
+    </view>
+  </view>
+
+  <!-- 提示成功或错误信息 -->
+  <view class="PromptMessage" style="visibility: {{judge}};">
+    <view class="prompt_message">
+      <text wx:if="{{boolean==true}}">修改成功~</text>
+      <text wx:else="{{boolean==false}}">填写错误！</text>
+    </view>
+  </view>
+
   <!-- 个人页面头部 -->
   <view class="header">
     <image class="bg" src="/static/image/personal/background.jpg"></image>
@@ -38,11 +68,12 @@
         <text class="iconfont icon-xiaoxi"></text>
         <text>回复我的</text>
       </view>
-      <view class="nav-item">
-        <text class="iconfont icon-bianji"></text>
+      <view class="nav-item" bindtap="personal_editor">
+        <text class="iconfont icon-bianji" ></text>
         <text>个人编辑</text>
       </view>
     </view>
+    
     <!-- 主体部分列表 -->
     <view class="personalContent">
       <!-- 滑动块 -->
@@ -77,9 +108,14 @@
           <text>在线客服</text>
           <text class="more"> > </text>
         </view>
-        <view class="cardItem">
-          <text class="iconfont icon-shuoming"></text>
-          <text>关于团队</text>
+        <view class="cardItem" bindtap="clickdata">
+          <text class="iconfont icon-shuoming" ></text>
+          <text>关于数据</text>
+          <text class="more"> > </text>
+        </view>
+        <view class="cardItem" >
+          <text class="iconfont icon-time"></text>
+          <text>点击时间</text>
           <text class="more"> > </text>
         </view>
       </view>
