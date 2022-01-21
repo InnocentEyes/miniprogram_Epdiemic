@@ -1,0 +1,55 @@
+<view>
+    <view class="title"><text >【数据说明】</text></view>
+    <view class="first"> <text>1.数据来源:</text></view>
+    <view class="detail"><text>来自国家卫健委、各省市区卫健委、各省市区政府、港澳台官方渠道公开数据；</text></view>
+    <view class="second"><text>2.实时数据统计原则:</text></view>
+    <view class="detail">
+        <text >a）每日上午优先将全国数据与国家卫健委公布数据对齐（此时各省市数据尚未及时更新，会出现全国数据大于各省份合计数的情况）。</text>
+    </view>
+    <view class="detail">
+        <text>b）当各省公布数据总和大于国家公布数据时，则全国数据切换为各省合计数。</text>
+    </view>
+    <view class="detail">
+         <text>c）「较昨日＋」的数据使用当前国家总数减去国家卫健委公布的前一日数据，这个数值会根据实时数据发生变化。</text>
+    </view>
+   <view class="detail">
+       <text>d）疑似数据「较昨日＋」因为会有转确诊与排除疑似两种情况，因此只采用国家每日公布的新增疑似数据，而不是两日的差异。</text>
+   </view>
+    <view class="third">
+         <text>3.疫情趋势图:</text>
+    </view>
+    <view class="detail">
+         <text>全国数据使用国家卫健委公布的截至前一日24:00数据，湖北数据使用湖北卫健委公布的截至前一日24:00数据，每日更新一次。</text>
+    </view>
+   <view class="fourth">
+       <text>4.检查阳性并不等于确诊病例，还有一部分被纳入无症状感染者。</text>
+   </view>
+    <view class="fifth">
+         <text>5.疑似数据因各省份未发布明细数据，目前仅同步全国总数，暂不呈现分省疑似病例。</text>
+    </view>
+   <view class="sixth">
+        <text>6.治愈数据来源于各个省市区县政府官方微博和官方媒体，每日会有多次更新，更新速度快于其他数据。</text>
+   </view>
+   <view class="seventh">
+        <text>7.海外数据说明:</text>
+   </view>
+   <view class="detail">
+       <text>a）海外实时数据来源:国内权威媒体（如央视新闻、人民日报等）、海外各地卫生部门官方网站和主流媒体。</text>
+   </view>
+    <view class="detail">
+         <text>b）海外数据较昨日:使用实时数据与北京时间上午10:00数据做差值。</text>
+    </view>
+   <view class="detail">
+        <text>c）海外趋势图说明:3月19日之前使用WHO每日公布的数据；3月19日由于WHO中美国数据、伊朗数据更新停滞，使用平台北京时间10:00的数据进行趋势图制作。</text>
+   </view>
+   <view class="detail"> 
+        <text>d）国外疫情数据中的「昨日＋」指的是国外或者该国数据在北京时间前一个8:00与在前一个8:00之间的差值，也就是北京时间的「昨日」国外或者该国新增数据。</text>
+   </view>
+   <view class="eighth">
+        <text>8.由于划分标准不同，风险地区面数据统计不含港澳台地区。</text>
+   </view>
+   <view class="ninth">
+        <text>9.丁香医生团队全力以赴提供权威、准确、及时的疫情数据，如有任何疑问，欢迎通过微信搜索「丁香医生＋」留言反馈。</text>
+   </view>
+   
+</view>

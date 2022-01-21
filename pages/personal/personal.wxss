@@ -175,3 +175,124 @@
 .cover-tainer .personalContent .cardList .cardItem .more {
   float: right;
 }
+.individual_editer,
+.PromptMessage{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  transition: 0.2s;
+}
+.individual_editer .centerbox{
+  position: absolute;
+  height: 85%;
+  width: 90%;
+  background-color: #eee;
+  border-radius: 50rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.editer .image{
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  border:5rpx solid #fff;
+  border-radius: 50%;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%,0);
+  cursor: pointer;
+}
+.editer .userinput{
+  position: absolute;
+  width: 90%;
+  height: 6%;
+  left: 5%;
+  top: 30%;
+  border: 1px solid #000;
+  border-radius: 30rpx;
+  text-align: center;
+}
+.editer .userlabel{
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  color: #846bff;
+}
+.editer .phoneinput{
+  position: absolute;
+  width: 90%;
+  height: 6%;
+  left: 5%;
+  top: 45%;
+  border: 1px solid #000;
+  border-radius: 30rpx;
+  text-align: center;
+}
+.editer .phonelabel{
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  color: #846bff;
+}
+.editer .passwordinput{
+  position: absolute;
+  width: 90%;
+  height: 6%;
+  left: 5%;
+  top: 60%;
+  border: 1px solid #000;
+  border-radius: 30rpx;
+  text-align: center;
+}
+.editer .passwordlabel{
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  color: #846bff;
+}
+.editer .resumelabel{
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  color: #846bff;
+}
+.editer .resumearea{
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 30rpx;
+  width: 90%;
+  height: 12%;
+  left: 5%;
+  top: 75%;
+  text-align: center;
+}
+.sumbit{
+  background-color: #846bff;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%,0);
+  color: #fff;
+  border-radius: 20rpx;
+}
+.close{
+  position: absolute;
+  font-size: xx-large;
+  right: 0;
+}
+.prompt_message{
+  position: absolute;
+  height: 10%;
+  width: 60%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20rpx;
+  text-align: center;
+  
+}
